@@ -193,9 +193,6 @@ public class NativeRunAgentTask extends NativeBaseTask {
     }
 
     private static boolean isJavaFXJar(File jar, JavaFXPlatform platform) {
-        return jar.isFile() &&
-                Arrays.stream(JavaFXModule.values()).anyMatch(javaFXModule ->
-                        javaFXModule.compareJarFileName(platform, jar.getName()) ||
-                                javaFXModule.getModuleJarFileName().equals(jar.getName()));
+        return false;
     }
 }
